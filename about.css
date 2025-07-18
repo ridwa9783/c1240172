@@ -1,0 +1,369 @@
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* BODY - background and text color */
+body {
+    background-color: rgb(1, 1, 42);
+    color: white;
+}
+
+/* HEADER */
+.main-header {
+    width: 100%;
+    position: fixed;
+    /* fixed on top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* semi-transparent black */
+    z-index: 1000;
+    /* keep on top */
+}
+
+.main-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation list in header */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Navigation links style */
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: #333;
+}
+
+/* Button style for Get Started */
+.btn-start {
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ABOUT HERO SECTION */
+.about-hero {
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url(images/about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-out;
+}
+
+.about-hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero p {
+    font-size: 22px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ABOUT CONTENT SECTION */
+.about-content {
+    display: flex;
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: burlywood;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Image section for about */
+.about-image {
+    flex: 1;
+    animation: fadeInRight 1s ease-out;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* TEAM SECTION */
+.team-section {
+    padding: 80px 50px;
+    background-color: rgb(1, 1, 42);
+    box-shadow: 0 5px 15px rgba(174, 170, 170, 0.35);
+    color: white;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+/* Team members container */
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Individual member box */
+.team-member {
+    width: 300px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+/* Member photo styling */
+.member-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+}
+
+/* Member name and role */
+.team-member h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #777;
+}
+
+/* CORE VALUES SECTION */
+.values-section {
+    padding: 80px 50px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgb(1, 1, 42);
+}
+
+.values-section h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: white;
+}
+
+/* Values container */
+.values {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Single value box */
+.value {
+    width: 300px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.value:hover {
+    transform: scale(1.05);
+}
+
+.value-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.value h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.value p {
+    color: white;
+    line-height: 1.6;
+}
+
+/* FOOTER SECTION */
+.footer {
+    background-color: #151618;
+    padding: 60px 20px;
+    color: white;
+}
+
+/* Footer content grid */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Newsletter & contact text spacing */
+.newsletter p,
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* Newsletter form */
+.newsletter form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Newsletter subscribe button */
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer links container */
+.footer-links .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Footer nav links */
+.footer-links .footer-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links .footer-nav a:hover {
+    color: #3498db;
+}
+
+/* Animations */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+
+    /* Smaller hero title */
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    /* About content stack vertically */
+    .about-content {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    /* Footer stacking */
+    .footer {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    /* Footer sections take full width */
+    .footer-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* Team members stack vertically */
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}

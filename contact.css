@@ -1,0 +1,435 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: rgb(1, 1, 42);
+    color: white;
+}
+
+/* HEADER */
+.main-header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.main-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    background-color: #333;
+}
+
+.btn-start {
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    height: 400px;
+    color: white;
+    background-image: url(images/contct.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 170px;
+    font-size: 100px;
+    animation: txtt 1s ease forwards;
+}
+
+/* animation */
+@keyframes txtt {
+    from {
+        transform: scale(0.6);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* FORM CONTAINER */
+.form {
+    max-width: 1000px;
+    margin: 100px auto 0;
+    display: flex;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+    color: #333;
+}
+
+/* Contact Information */
+.contact-information {
+    flex: 1;
+    padding: 50px;
+    background: linear-gradient(135deg, #011040, #000928);
+    color: white;
+}
+
+.information-item,
+.info-item {
+    margin-bottom: 25px;
+}
+
+.information-item h3,
+.info-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: #333;
+    background: white;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #a777e3;
+    box-shadow: 0 0 0 3px rgba(167, 119, 227, 0.2);
+    outline: none;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Button */
+.btn {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 142, 251, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(106, 142, 251, 0.6);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Input Icons */
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    padding-left: 40px;
+}
+
+.input-group:before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.input-group:hover:before {
+    opacity: 0.8;
+}
+
+.input-group.name:before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23666666"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+}
+
+.input-group.email:before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23666666"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>');
+}
+
+.input-group.phone:before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23666666"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>');
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 50px;
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+}
+
+.faq-section h2 {
+    font-size: 36px;
+    color: #d46a6a;
+    margin-bottom: 40px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+    color: #333;
+}
+
+.faq-question {
+    padding: 20px;
+    background-color: #f9f3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #555;
+}
+
+.faq-question:hover {
+    background-color: #f0e0e0;
+}
+
+.faq-question h4 {
+    margin: 0;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d46a6a;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    text-align: left;
+    background-color: white;
+}
+
+.faq-answer p {
+    padding: 20px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #151618;
+    padding: 60px 20px;
+    color: white;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.newsletter p,
+.contact-info p {
+    margin: 10px 0;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-links .links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-links .links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links .links a:hover {
+    color: #3498db;
+}
+
+/* CTA SECTION */
+.cta-section {
+    padding: 60px 20px;
+    background-color: #3f0138;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cta-section .cta-button {
+    margin: 0 auto;
+    width: 250px;
+    padding: 15px 40px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.cta-section .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+    }
+
+    .hero {
+        font-size: 48px;
+        padding-top: 100px;
+    }
+
+    .form {
+        flex-direction: column;
+        margin: 120px 20px 20px;
+    }
+
+    .contact-information,
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .faq-section {
+        padding: 40px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .footer-links .links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
